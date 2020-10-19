@@ -2,16 +2,16 @@
 class Pixlet < Formula
   desc "App runtime and UX toolkit for pixel-based apps."
   homepage "https://github.com/tidbyt/pixlet"
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/tidbyt/pixlet/releases/download/v0.2.0/pixlet_0.2.0_darwin_amd64.tar.gz"
-    sha256 "b2cfc13be48761547076861c0de0c49d13db31001d9fce3200bc98566cdc8ffb"
+    url "https://github.com/tidbyt/pixlet/releases/download/v0.3.0/pixlet_0.3.0_darwin_amd64.tar.gz"
+    sha256 "05f97b9c5daacf428f033ccf3a3896165ab269910f2beae93b52a9c48bf3621a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.2.0/pixlet_0.2.0_linux_amd64.tar.gz"
-      sha256 "94f203984febcceb98e72696934dacbc64f62190fce26c85810b39118ca1e955"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.3.0/pixlet_0.3.0_linux_amd64.tar.gz"
+      sha256 "688f2dfd853df6e314a4ed56121da7d2ea3f0e226311ccf852be39621dcca1c7"
     end
   end
   
