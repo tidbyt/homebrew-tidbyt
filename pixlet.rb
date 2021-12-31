@@ -5,12 +5,12 @@
 class Pixlet < Formula
   desc "App runtime and UX toolkit for pixel-based apps."
   homepage "https://github.com/tidbyt/pixlet"
-  version "0.8.0"
+  version "0.8.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.8.0/pixlet_0.8.0_darwin_amd64.tar.gz"
-      sha256 "92f4eb391f1a85ec3c957bab48098be1923c7412fdb99711dd92ff407681e93a"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.8.1/pixlet_0.8.1_darwin_amd64.tar.gz"
+      sha256 "a68c225723b5c571f21dbe9b32a0d1562c8520f61de130c7fc4c2b0beb460be5"
 
       def install
         bin.install "pixlet"
@@ -20,8 +20,8 @@ class Pixlet < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.8.0/pixlet_0.8.0_linux_amd64.tar.gz"
-      sha256 "d9204cf6c427f3c02535e74d960486eb0750dccaeba9c6359366bbedd70cdc4f"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.8.1/pixlet_0.8.1_linux_amd64.tar.gz"
+      sha256 "b276854bbffbeb2f913960ed5a24fcc6dfef2f874a462b87ffb5b4fd6475a00f"
 
       def install
         bin.install "pixlet"
