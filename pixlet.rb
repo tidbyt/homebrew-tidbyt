@@ -5,20 +5,14 @@
 class Pixlet < Formula
   desc "App runtime and UX toolkit for pixel-based apps."
   homepage "https://github.com/tidbyt/pixlet"
-  version "0.22.4"
+  version "0.22.5"
+
+  depends_on "webp"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_darwin_arm64.tar.gz"
-      sha256 "eadaaccfb53c45d56e90bcb005d180e48c6665332d1f775bf660a7c5f1188d23"
-
-      def install
-        bin.install "pixlet"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_darwin_amd64.tar.gz"
-      sha256 "06b49cab038f95e8313a38be7707c1b0a5a83bf0c475d0e3a71d57197ae8eefa"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.22.5/pixlet_0.22.5_darwin_arm64.tar.gz"
+      sha256 "9076dccb57ad9ec344dc5079c60fecabd4ba76c69a1942fd4f2046a0cf2e5dc1"
 
       def install
         bin.install "pixlet"
@@ -28,24 +22,14 @@ class Pixlet < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_linux_arm64.tar.gz"
-      sha256 "1fb296f983dd75d24884861283058ce5a9d5d99508ca950e8a7735e235bae761"
-
-      def install
-        bin.install "pixlet"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.22.4/pixlet_0.22.4_linux_amd64.tar.gz"
-      sha256 "a5e65dedde3b21607cd6eb40327969f393b648c9c3d22df9c00a46efc9195ebb"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.22.5/pixlet_0.22.5_linux_arm64.tar.gz"
+      sha256 "d1cdcfc136661fa67e3542c7d80aaa51f4ca5faa9acd1622247ba865b1f871a0"
 
       def install
         bin.install "pixlet"
       end
     end
   end
-
-  depends_on "webp"
 
   test do
     system "#{bin}/pixlet --version"
