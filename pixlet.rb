@@ -5,22 +5,22 @@
 class Pixlet < Formula
   desc "App runtime and UX toolkit for pixel-based apps."
   homepage "https://github.com/tidbyt/pixlet"
-  version "0.23.1"
+  version "0.23.2"
 
   depends_on "webp"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.1/pixlet_0.23.1_darwin_arm64.tar.gz"
-      sha256 "b8257fda960d0d3d38b2f0e396c1c22b66fcd6347a4bc5d0ce214050b153886a"
+    if Hardware::CPU.intel?
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.2/pixlet_0.23.2_darwin_amd64.tar.gz"
+      sha256 "190987180e0278b7832ea3c8dcbdd957c2e44a766000b6d64ef6600329d88c49"
 
       def install
         bin.install "pixlet"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.1/pixlet_0.23.1_darwin_amd64.tar.gz"
-      sha256 "450bee3219187201ad8b602b4772ded356a1c6e51a8a4c072073c4597df694c2"
+    if Hardware::CPU.arm?
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.2/pixlet_0.23.2_darwin_arm64.tar.gz"
+      sha256 "c3b6f602dfbf41108dea6c95e2a479f7c4a30b42242c628b88ea5243b62c0052"
 
       def install
         bin.install "pixlet"
@@ -30,16 +30,16 @@ class Pixlet < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.1/pixlet_0.23.1_linux_amd64.tar.gz"
-      sha256 "fa26dfd59ccb8758b043d976d9ae475150ba9d658762df73c28a97928ebd119a"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.2/pixlet_0.23.2_linux_amd64.tar.gz"
+      sha256 "c5d30c882126477023d631334a36366186b56aea25e91c0816f3add576ff7302"
 
       def install
         bin.install "pixlet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.1/pixlet_0.23.1_linux_arm64.tar.gz"
-      sha256 "31ec498f05674a7d8bef3ecf615648fd0e0637853b7ec875f1e19fcfe6c962e4"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.23.2/pixlet_0.23.2_linux_arm64.tar.gz"
+      sha256 "8a831c6fb956b29700b948f4a8367d811318fcca000b5d3cd05cd4adfe54eb46"
 
       def install
         bin.install "pixlet"
