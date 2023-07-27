@@ -5,22 +5,22 @@
 class Pixlet < Formula
   desc "App runtime and UX toolkit for pixel-based apps."
   homepage "https://github.com/tidbyt/pixlet"
-  version "0.27.2"
+  version "0.27.3"
 
   depends_on "webp"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.2/pixlet_0.27.2_darwin_arm64.tar.gz"
-      sha256 "a46a10c30f34f5164685213ee42ab9dd8d5dc2e1c229893bc66ac04c45ebdd72"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.3/pixlet_0.27.3_darwin_arm64.tar.gz"
+      sha256 "34c9493ac8173abfc0fbc8db64575847d6539206a6706e7925066c3bb13f38a6"
 
       def install
         bin.install "pixlet"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.2/pixlet_0.27.2_darwin_amd64.tar.gz"
-      sha256 "458aa90503762a31912acd060d1413231855be60360025373587eba5bbd6d12c"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.3/pixlet_0.27.3_darwin_amd64.tar.gz"
+      sha256 "052cf17b6aa9992963e6c2e80772d513ab3dee44597eb6375f3c6c67735cb8d9"
 
       def install
         bin.install "pixlet"
@@ -30,16 +30,16 @@ class Pixlet < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.2/pixlet_0.27.2_linux_amd64.tar.gz"
-      sha256 "7eb2e11d361e427073f2d157026fdbc50fdb7704166b74176e785be6114323f8"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.3/pixlet_0.27.3_linux_amd64.tar.gz"
+      sha256 "a648f07c5d10f272ddaca036bab4529b912402bfef89fb7aaeaea9a1f45f1749"
 
       def install
         bin.install "pixlet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.2/pixlet_0.27.2_linux_arm64.tar.gz"
-      sha256 "0bc36524a45df6e4acec6c347bab2f9f6452008fffa7a0d0bdc67bd526b52c77"
+      url "https://github.com/tidbyt/pixlet/releases/download/v0.27.3/pixlet_0.27.3_linux_arm64.tar.gz"
+      sha256 "7fc049b4f434721a23624f9def95196d798c103d331f59d5c6d0026478231a2c"
 
       def install
         bin.install "pixlet"
